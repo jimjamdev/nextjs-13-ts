@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cosmos": "cosmos",
-    "cosmos:export": "cosmos-export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
