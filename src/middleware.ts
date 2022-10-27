@@ -25,29 +25,27 @@ import { searchParamsToObject } from './utils/searchParamsToObject';
 export function middleware(request: NextRequest) {
   console.log('request', request);
   /** doesn't return any params */
-  /*const { nextUrl: { search } } = request;
-  const urlSearchParams = new URLSearchParams(search);*/
+  const { nextUrl, headers, geo } = request;
+  //const urlSearchParams = new URLSearchParams(searchParams);
+  console.log('nexturl', nextUrl);
 
-  const language = request?.headers?.get('accept-language')?.split(',')?.[0]?.split('-')?.[0] || 'en';
-  const country = request?.geo?.country?.toLowerCase() || 'us';
-  const windowParams = request?.headers?.get('referer')?.split('?')?.[1]; // Hackity
+  const language = headers?.get('accept-language')?.split(',')?.[0]?.split('-')?.[0] || 'en';
+  const country = geo?.country?.toLowerCase() || 'us';
+  const windowParams = headers?.get('referer')?.split('?')?.[1]; // Hackity
   console.log(`country: ${country}`, `language: ${language}`, `windowParams: ${searchParamsToObject(windowParams)}`);
   // Get country
   //const country = request?.geo.country?.toLowerCase() || 'us';
 
   // Clone the request headers and set a new header `x-version`
   const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('x-version', '13');
-
-  // You can also set request headers in NextResponse.rewrite
   const response = NextResponse.next({
     request: {
-      // New request headers
       headers: requestHeaders,
     },
   });
 
   // Set a new response header `x-version`
-  response.headers.set('x-version', '13');
+  response.headers.set('x-version', '2.0.1');
+
   return response;
 }
