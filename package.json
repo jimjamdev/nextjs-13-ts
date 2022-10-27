@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "test": "npm run lint:fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
