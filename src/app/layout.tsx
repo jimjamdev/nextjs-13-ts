@@ -6,7 +6,7 @@ export default function Layout({ locale, children, ...rest }: {
 }) {
   console.log('rest', rest);
   return <main className="layout">
-    <header><h3 style={{ color: 'tomato' }}>{locale || 'na'}</h3></header>
+    <header><h3 style={{ color: 'tomato' }}>{locale || 'nope'}</h3></header>
     {children}
   </main>;
 }
