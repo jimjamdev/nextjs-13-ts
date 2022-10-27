@@ -1,7 +1,7 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
 
 export default function Layout({ children }: {
-    children: ReactNode;
+  children: ReactNode;
 }) {
-    return <main className="layout">{children}</main>;
+  return <main className="layout">{children}</main>;
 }
