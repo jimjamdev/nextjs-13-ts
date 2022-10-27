@@ -20,12 +20,18 @@ export default function middleware(req: NextRequest) {
 // middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { searchParamsToObject } from './utils/searchParamsToObject';
 
 export function middleware(request: NextRequest) {
   console.log('request', request);
+  /** doesn't return any params */
+  /*const { nextUrl: { search } } = request;
+  const urlSearchParams = new URLSearchParams(search);*/
+
   const language = request?.headers?.get('accept-language')?.split(',')?.[0]?.split('-')?.[0] || 'en';
   const country = request?.geo?.country?.toLowerCase() || 'us';
-  console.log(`country: ${country}`, `language: ${language}`);
+  const windowParams = request?.headers?.get('referer')?.split('?')?.[1]; // Hackity
+  console.log(`country: ${country}`, `language: ${language}`, `windowParams: ${searchParamsToObject(windowParams)}`);
   // Get country
   //const country = request?.geo.country?.toLowerCase() || 'us';
 
