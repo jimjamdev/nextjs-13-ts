@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-13-ts",
-  "version": "0.1.0",
+  "name": "green-jade-arcade-lobby-v2",
+  "version": "2.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
