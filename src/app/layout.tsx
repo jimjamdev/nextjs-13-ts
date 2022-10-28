@@ -17,6 +17,7 @@ export default function Layout({
       <body>
         <main className="layout">
           <header>
+            <h1>Global Layout</h1>
             <h3 style={{ color: 'tomato' }}>{locale || 'nope'}</h3>
           </header>
           {children}
