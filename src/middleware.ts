@@ -28,22 +28,20 @@ export function middleware(request: NextRequest) {
   const { nextUrl, headers, geo } = request;
   //const urlSearchParams = new URLSearchParams(searchParams);
   console.log('nexturl', nextUrl);
+  const locale = headers?.get('accept-language')?.split(',')?.[0] || 'en-US';
 
-  const language = headers?.get('accept-language')?.split(',')?.[0]?.split('-')?.[0] || 'en';
-  const country = geo?.country?.toLowerCase() || 'us';
-  const windowParams = headers?.get('referer')?.split('?')?.[1]; // Hackity
-  console.log(`country: ${country}`, `language: ${language}`, `windowParams: ${searchParamsToObject(windowParams)}`);
-  // Get country
-  //const country = request?.geo.country?.toLowerCase() || 'us';
+  const language = locale?.split('-')?.[0] || 'en';
+  const country = geo?.country?.toLowerCase() || locale?.split('-')?.[1] || 'us';
+  const params = headers?.get('referer')?.split('?')?.[1]; // Hackity
 
-  // Clone the request headers and set a new header `x-version`
+  console.log(`country: ${country}`, `language: ${language}`, `windowParams: ${searchParamsToObject(params)}`);
+
   const requestHeaders = new Headers(request.headers);
   const response = NextResponse.next({
     request: {
       headers: requestHeaders,
     },
   });
-
   // Set a new response header `x-version`
   response.headers.set('x-version', '2.0.1');
 
