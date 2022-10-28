@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import RootStyleRegistry from '../theme/lib/styled-components-registry';
 
 export default function Layout({
   locale,
@@ -16,6 +17,7 @@ export default function Layout({
         <title>Green Jade</title>
       </head>
       <body>
+      <RootStyleRegistry>
         <main className="layout">
           <header>
             <h1>Global Layout</h1>
@@ -29,6 +31,7 @@ export default function Layout({
           </nav>
           {children}
         </main>
+      </RootStyleRegistry>
       </body>
     </html>
   );
