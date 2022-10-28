@@ -3,7 +3,7 @@
   "version": "2.5.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@types/node": "18.11.7",
-    "@types/react": "18.0.23",
-    "@types/react-dom": "18.0.7",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
