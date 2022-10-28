@@ -1,12 +1,7 @@
 import type { Story } from '@ladle/react';
-import { Button } from './button';
+import { Button, ButtonProps } from './button';
 
-export const button: Story<{
-  children: string;
-  disabled: boolean;
-  variant: string;
-  size: string;
-}> = ({ disabled, children, variant, size }) => (
+export const button: Story<ButtonProps> = ({ disabled, children, variant, size }: ButtonProps) => (
   <Button variant={variant} size={size} disabled={disabled}>{children}</Button>
 );
 
