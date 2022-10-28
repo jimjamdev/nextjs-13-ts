@@ -1,3 +1,4 @@
-export default function Page() {
+export default function Page({ params, searchParams }: { params: any; searchParams: any }) {
+  console.log('params', params, 'searchParams', searchParams);
   return <><h1>TEST</h1></>;
 }
