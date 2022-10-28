@@ -1,33 +1,29 @@
-import { action } from '@ladle/react';
 import type { Story } from '@ladle/react';
 import { Button } from './button';
 
 export const button: Story<{
-  label: string;
+  children: string;
   disabled: boolean;
-  count: number;
-  colors: string[];
   variant: string;
   size: string;
-}> = ({ count, disabled, label, colors, variant, size }) => (
-  <Button variant={variant} size={size}>{label}</Button>
+}> = ({ disabled, children, variant, size }) => (
+  <Button variant={variant} size={size} disabled={disabled}>{children}</Button>
 );
 
 button.args = {
-  label: 'Hello world',
+  children: 'Button',
   disabled: false,
-  count: 2,
-  colors: ['Red', 'Blue'],
 };
 button.argTypes = {
   variant: {
-    options: ['primary', 'secondary'],
-    control: { type: 'radio' },
+    options: ['primary', 'secondary', ''],
+    control: { type: 'select' },
     defaultValue: 'primary',
   },
   size: {
-    options: ['small', 'medium', 'big', 'huuuuge'],
+    options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', ''],
     control: { type: 'select' },
+    defaultValue: 'md',
   },
 };
 
