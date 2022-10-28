@@ -22,7 +22,10 @@ export default function Layout({
             <h3 style={{ color: 'tomato' }}>{locale || 'nope'}</h3>
           </header>
           <nav>
-            <Link href="/sub" locale="en">Test Sub Page</Link>
+            <ul>
+              <li><Link href="/" locale="en">Home</Link></li>
+              <li><Link href="/sub" locale="en">Test Sub Page</Link></li>
+            </ul>
           </nav>
           {children}
         </main>
