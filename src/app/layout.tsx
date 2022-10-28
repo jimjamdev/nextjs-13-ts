@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Link from 'next/link';
 
 export default function Layout({
   locale,
@@ -20,6 +21,9 @@ export default function Layout({
             <h1>Global Layout</h1>
             <h3 style={{ color: 'tomato' }}>{locale || 'nope'}</h3>
           </header>
+          <nav>
+            <Link href="/sub" locale="en">Dashboard</Link>
+          </nav>
           {children}
         </main>
       </body>
