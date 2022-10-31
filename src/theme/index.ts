@@ -1,5 +1,4 @@
-export { config } from './config';
-
+import { config } from './config';
 import styled, { css, createGlobalStyle } from 'styled-components';
 
-export { styled, css, createGlobalStyle };
+export { config, styled, css, createGlobalStyle };
