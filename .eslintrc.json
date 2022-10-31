@@ -1,5 +1,15 @@
 {
   "extends": ["prettier", "airbnb-typescript", "next/core-web-vitals"],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   }
