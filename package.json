@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "ui:dev": "npx ladle serve",
     "ui:build": "npx ladle build -o ./docs/ui",
-    "ui:preview": "npx ladle preview -o ./docs/ui"
+    "ui:preview": "npx ladle preview -o ./docs/ui",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -33,6 +34,7 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
+    "cypress": "^10.11.0",
     "eslint": "^8.26.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
