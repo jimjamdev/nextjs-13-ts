@@ -1,6 +1,6 @@
 'use client';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { styled } from '~/theme/index';
+import { styled } from '~theme/index';
 
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
