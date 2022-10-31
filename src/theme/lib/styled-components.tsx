@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from '~theme/index';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 export function useStyledComponentsRegistry() {
@@ -18,7 +19,9 @@ export function useStyledComponentsRegistry() {
     children: JSX.Element;
   }) => (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+      <ThemeProvider theme={{}}>
       {children as React.ReactElement}
+      </ThemeProvider>
     </StyleSheetManager>
   );
 
