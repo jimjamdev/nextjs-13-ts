@@ -1,4 +1,6 @@
+'use client';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { styled } from '../../../theme';
 
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -7,8 +9,12 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 };
 
+const ButtonStyle = styled('button')`
+background: tomato;
+`;
+
 
 export function Button({ children }: ButtonProps) {
-  return <button>{children}</button>;
+  return <ButtonStyle>{children}</ButtonStyle>;
 }
 
