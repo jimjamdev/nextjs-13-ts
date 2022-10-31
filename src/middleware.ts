@@ -23,11 +23,11 @@ import type { NextRequest } from 'next/server';
 import { searchParamsToObject } from './utils/searchParamsToObject';
 
 export function middleware(request: NextRequest) {
-  console.log('request', request);
+  //console.log('request', request);
   /** doesn't return any params */
   const { nextUrl, headers, geo } = request;
   //const urlSearchParams = new URLSearchParams(searchParams);
-  console.log('nexturl', nextUrl);
+  //console.log('nexturl', nextUrl);
   const locale = headers?.get('accept-language')?.split(',')?.[0] || 'en-US';
 
   const language = locale?.split('-')?.[0] || 'en';
@@ -36,14 +36,19 @@ export function middleware(request: NextRequest) {
 
   console.log(`country: ${country}`, `language: ${language}`, `windowParams: ${searchParamsToObject(params)}`);
 
-  const requestHeaders = new Headers(request.headers);
+  /*const requestHeaders = new Headers(request.headers);
   const response = NextResponse.next({
     request: {
       headers: requestHeaders,
     },
   });
   // Set a new response header `x-version`
-  response.headers.set('x-version', '2.0.1');
+  response.headers.set('x-version', '2.0.1');*/
+  const response = NextResponse.rewrite(new URL('/', request.url));
 
   return response;
 }
+
+/*export const config = {
+  matcher: '/',
+};*/
