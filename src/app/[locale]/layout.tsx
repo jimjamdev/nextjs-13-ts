@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
-import RootStyleRegistry from '../../theme/lib/styled-components-registry';
+import RootStyleRegistry from '~theme/lib/styled-components-registry';
 
 export default function Layout({
   locale,
