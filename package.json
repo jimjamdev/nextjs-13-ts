@@ -1,6 +1,6 @@
 {
   "name": "green-jade-arcade-lobby-v2",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,13 +8,13 @@
     "start": "next start",
     "lint": "next lint ./src",
     "lint:fix": "next lint --fix",
-    "test": "update-version & npm run lint",
+    "test": "npm run update-version & npm run lint",
     "prepare": "husky install",
     "ui:dev": "npx ladle serve",
     "ui:build": "npx ladle build -o ./docs/ui",
     "ui:preview": "npx ladle preview -o ./docs/ui",
     "cypress": "cypress open",
-    "update-version": "npm version patch -m \"Update version to %s\""
+    "update-version": "npm version patch -git-tag-version false && git add package.json"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
