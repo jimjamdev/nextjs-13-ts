@@ -1,8 +1,8 @@
 'use client';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { styled, BackgroundColorProps, color, ColorProps, compose } from '~theme/index';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProps =
 ColorProps & BackgroundColorProps & {
   children: ReactNode;
   variant?: 'primary' | 'secondary';

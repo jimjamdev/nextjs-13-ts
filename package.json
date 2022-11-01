@@ -1,6 +1,6 @@
 {
   "name": "green-jade-arcade-lobby-v2",
-  "version": "2.5.8",
+  "version": "2.5.9",
   "private": true,
   "scripts": {
     "dev": "next dev",
