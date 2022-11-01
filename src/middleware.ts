@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 // import { searchParamsToObject } from '~utils/searchParamsToObject';
 
 export function middleware(request: NextRequest) {
-  const { headers, geo } = request;
+  const { headers } = request;
   const locale = headers?.get('accept-language')?.split(',')?.[0] || 'en-US';
   const language = locale?.split('-')?.[0] || 'en';
   /*const country = geo?.country?.toLowerCase() || locale?.split('-')?.[1] || 'us';
