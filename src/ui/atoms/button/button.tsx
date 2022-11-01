@@ -9,9 +9,7 @@ ColorProps & BackgroundColorProps & {
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 };
 
-const ButtonStyle = styled('button')`
-  ${compose(color)}};
-`;
+const ButtonStyle = styled('button')(compose(color));
 
 export function Button({ children }: ButtonProps) {
   return <ButtonStyle color="white" bg={['red', 'green', 'blue']}>{children}</ButtonStyle>;
