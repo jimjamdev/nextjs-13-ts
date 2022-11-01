@@ -1,7 +1,7 @@
 'use client';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { styled } from '~theme/index';
-import { backgroundColor, BackgroundColorProps, color, ColorProps, compose } from 'styled-system';
+import { BackgroundColorProps, color, ColorProps, compose } from 'styled-system';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 ColorProps & BackgroundColorProps & {
@@ -11,9 +11,9 @@ ColorProps & BackgroundColorProps & {
 };
 
 const ButtonStyle = styled('button')`
-  ${compose(color, backgroundColor)}};
+  ${compose(color)}};
 `;
 
 export function Button({ children }: ButtonProps) {
-  return <ButtonStyle color="white" backgroundColor={['red', 'green', 'blue']}>{children}</ButtonStyle>;
+  return <ButtonStyle color="white" bg={['red', 'green', 'blue']}>{children}</ButtonStyle>;
 }
