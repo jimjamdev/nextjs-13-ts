@@ -8,6 +8,8 @@ export const button: Story<ButtonProps> = ({ disabled, children, variant, size }
 button.args = {
   children: 'Button',
   disabled: false,
+  variant: 'primary',
+  size: 'md',
 };
 button.argTypes = {
   variant: {
