@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from '~theme/index';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import { GlobalStyle } from '~theme/globalStyle';
 
 export function useStyledComponentsRegistry() {
   const [styledComponentsStyleSheet] = React.useState(
@@ -20,7 +21,10 @@ export function useStyledComponentsRegistry() {
   }) => (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
       <ThemeProvider theme={{}}>
-      {children as React.ReactElement}
+        <>
+          <GlobalStyle />
+          {children as React.ReactElement}
+        </>
       </ThemeProvider>
     </StyleSheetManager>
   );
