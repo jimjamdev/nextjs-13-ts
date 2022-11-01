@@ -1,7 +1,6 @@
 'use client';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { styled } from '~theme/index';
-import { BackgroundColorProps, color, ColorProps, compose } from 'styled-system';
+import { styled, BackgroundColorProps, color, ColorProps, compose } from '~theme/index';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 ColorProps & BackgroundColorProps & {
