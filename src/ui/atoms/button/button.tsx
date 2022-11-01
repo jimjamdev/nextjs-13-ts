@@ -1,10 +1,10 @@
 'use client';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { styled } from '~theme/index';
-import { color, ColorProps, compose } from 'styled-system';
+import { backgroundColor, BackgroundColorProps, color, ColorProps, compose } from 'styled-system';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-ColorProps & {
+ColorProps & BackgroundColorProps & {
   children: ReactNode;
   variant?: 'primary' | 'secondary';
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -12,7 +12,7 @@ ColorProps & {
 
 const ButtonStyle = styled('button')`
   background: tomato;
-  ${compose(color)}};
+  ${compose(color, backgroundColor)}};
 `;
 
 export function Button({ children }: ButtonProps) {
