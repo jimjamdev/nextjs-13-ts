@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb-typescript", "prettier"],
+  "extends": ["plugin:@typescript-eslint/recommended", "next", "next/core-web-vitals", "airbnb-typescript", "prettier"],
   "plugins": ["@typescript-eslint", "react", "prettier"],
   "rules": {},
   "parser": "@typescript-eslint/parser",
