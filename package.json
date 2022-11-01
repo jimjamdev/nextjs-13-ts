@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "next lint ./src",
     "lint:fix": "next lint --fix",
-    "test": "npm run lint",
+    "test": "update-version & npm run lint",
     "prepare": "husky install",
     "ui:dev": "npx ladle serve",
     "ui:build": "npx ladle build -o ./docs/ui",
     "ui:preview": "npx ladle preview -o ./docs/ui",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "update-version": "npm version patch -m \"Update version to %s\""
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
