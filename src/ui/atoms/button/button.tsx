@@ -11,7 +11,6 @@ ColorProps & BackgroundColorProps & {
 };
 
 const ButtonStyle = styled('button')`
-  background: tomato;
   ${compose(color, backgroundColor)}};
 `;
 
