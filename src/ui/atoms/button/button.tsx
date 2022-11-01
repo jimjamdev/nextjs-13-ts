@@ -12,5 +12,5 @@ ColorProps & BackgroundColorProps & {
 const ButtonStyle = styled('button')(compose(color));
 
 export function Button({ children }: ButtonProps) {
-  return <ButtonStyle color="white" bg={['red', 'green', 'blue', 'yellow']}>{children}</ButtonStyle>;
+  return <ButtonStyle color="white" bg={['orange', 'lightgreen', 'skyblue', 'tomato']}>{children}</ButtonStyle>;
 }
