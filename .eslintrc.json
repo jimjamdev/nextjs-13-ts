@@ -1,14 +1,9 @@
 {
-  "extends": ["plugin:@typescript-eslint/recommended", "next", "next/core-web-vitals", "airbnb-typescript", "prettier"],
+  "extends": ["next", "next/core-web-vitals", "airbnb-typescript", "prettier"],
   "plugins": ["@typescript-eslint", "react", "prettier"],
   "rules": {},
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "sourceType": "module",
-    "ecmaVersion": 12,
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "project": "./tsconfig.json"
   }
 }

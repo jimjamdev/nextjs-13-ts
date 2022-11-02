@@ -1,8 +1,10 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { searchParamsToObject } from '~utils/searchParamsToObject';
+import { config as AppConfig } from '~config/index';
 
 export function middleware(request: NextRequest) {
+  const { defaultLocale = '' } = AppConfig;
   const { headers, nextUrl, geo } = request;
   const { pathname, searchParams } = nextUrl;
   console.log('***Middleware', pathname, searchParams);
@@ -10,7 +12,7 @@ export function middleware(request: NextRequest) {
   //**
   // Redirect to correct locale
   if (pathname === '/') {
-    const locale = headers?.get('accept-language')?.split(',')?.[0] || 'en-US';
+    const locale = headers?.get('accept-language')?.split(',')?.[0] || defaultLocale;
     const language = locale?.split('-')?.[0] || 'en';
     const country = geo?.country?.toLowerCase() || locale?.split('-')?.[1] || 'us';
     const params = headers?.get('referer')?.split('?')?.[1];
