@@ -7,10 +7,12 @@ ColorProps & BackgroundColorProps & {
   children: ReactNode;
   variant?: 'primary' | 'secondary';
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  disabled?: boolean;
+  shape?: 'pill' | 'square';
 };
 
 const ButtonStyle = styled('button')(compose(color));
 
-export function Button({ children }: ButtonProps) {
-  return <ButtonStyle color="white" bg={['orange', 'lightgreen', 'skyblue', 'tomato']}>{children}</ButtonStyle>;
+export function Button({ children, variant = 'primary', bg = ['orange', 'lightgreen', 'skyblue', 'tomato'], size, shape }: ButtonProps) {
+  return <ButtonStyle size={size} color={variant} bg={bg} shape={shape}>{children}</ButtonStyle>;
 }

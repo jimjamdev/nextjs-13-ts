@@ -5,6 +5,9 @@ const nextConfig = {
   experimental: {
     appDir: true
   },
+  eslint: {
+    dirs: ['src']
+  },
   /*i18n: {
     locales: ['en', 'fr'],
     defaultLocale: 'en',

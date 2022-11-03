@@ -1,8 +1,7 @@
 {
-  "extends": ["next", "next/core-web-vitals", "airbnb-typescript", "prettier"],
-  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "extends": ["airbnb-typescript", "prettier", "next"],
+  "plugins": ["prettier"],
   "rules": {},
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   }
