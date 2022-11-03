@@ -14,7 +14,7 @@ button.args = {
 };
 button.argTypes = {
   variant: {
-    options: ['primary', 'secondary', 'red', 'green', 'blue', 'yellow', ['orange', 'lightgreen', 'skyblue', 'tomato']],
+    options: ['primary', 'secondary', 'red', 'green', 'blue', 'yellow', "['orange', 'lightgreen', 'skyblue', 'tomato']"],
     control: { type: 'select' },
     defaultValue: 'primary',
   },

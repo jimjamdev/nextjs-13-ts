@@ -1,6 +1,6 @@
 {
   "name": "green-jade-arcade-lobby-v2",
-  "version": "2.5.19",
+  "version": "2.5.20",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,7 +26,8 @@
     "react-dom": "18.2.0",
     "styled-components": "^6.0.0-beta.5",
     "styled-system": "^5.1.5",
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.4",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@ladle/react": "^2.4.5",
