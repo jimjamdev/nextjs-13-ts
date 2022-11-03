@@ -13,6 +13,6 @@ ColorProps & BackgroundColorProps & {
 
 const ButtonStyle = styled('button')(compose(color));
 
-export function Button({ children, variant = 'primary', bg = ['orange', 'lightgreen', 'skyblue', 'tomato'], size, shape }: ButtonProps) {
-  return <ButtonStyle size={size} color={variant} bg={bg} shape={shape}>{children}</ButtonStyle>;
+export function Button({ children, variant = 'primary', size, shape }: ButtonProps) {
+  return <ButtonStyle size={size} variant={variant} bg={variant} shape={shape}>{children}</ButtonStyle>;
 }

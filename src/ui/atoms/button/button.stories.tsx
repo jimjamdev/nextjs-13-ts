@@ -19,13 +19,13 @@ button.argTypes = {
     defaultValue: 'primary',
   },
   size: {
-    options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', ''],
+    options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
     control: { type: 'select' },
     defaultValue: 'md',
   },
   shape: {
-    options: ['pill', 'square', ''],
-    control: { type: 'select' },
+    options: ['pill', 'square'],
+    control: { type: 'radio' },
     defaultValue: 'square',
   }
 };
