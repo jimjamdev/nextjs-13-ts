@@ -2,7 +2,7 @@ import type { Story } from '@ladle/react';
 import { Button, ButtonProps } from './button';
 
 export const button: Story<ButtonProps> = ({ disabled, children, variant, size }: ButtonProps) => (
-  <Button variant={variant} size={size} disabled={disabled}>{children}</Button>
+  <Button variant={variant} bg={variant} size={size} disabled={disabled}>{children}</Button>
 );
 
 button.args = {
@@ -13,7 +13,7 @@ button.args = {
 };
 button.argTypes = {
   variant: {
-    options: ['primary', 'secondary', ''],
+    options: ['primary', 'secondary', 'red', 'green', 'blue', 'yellow', ['orange', 'lightgreen', 'skyblue', 'tomato']],
     control: { type: 'select' },
     defaultValue: 'primary',
   },
