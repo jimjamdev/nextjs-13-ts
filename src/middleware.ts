@@ -4,7 +4,7 @@ import { searchParamsToObject } from '~utils/searchParamsToObject';
 import { config as AppConfig } from '~config/index';
 
 export function middleware(request: NextRequest) {
-  const { defaultLocale = '', shouldRedirectToBrowserLocale = true, locales = [] } = AppConfig;
+  const { defaultLocale = '' } = AppConfig;
   const { headers, nextUrl, geo } = request;
   const { pathname, searchParams } = nextUrl;
   console.log('***Middleware', pathname, searchParams);
@@ -24,5 +24,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: '/',
+  matcher: ['/'],
 };
