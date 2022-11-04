@@ -3,6 +3,7 @@
     "ecmaVersion": 12,
     "project": "./tsconfig.json",
     "tsconfigRootDir": "cypress",
-    "sourceType": "module"
+    "sourceType": "module",
+    "exclude": ["cypress"]
   }
 }
