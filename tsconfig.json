@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "rootDir": "./",
     "baseUrl": "./src",
     "paths": {
       "~*": ["src/*"],
       "~theme/*": ["theme/*"],
       "~ui/*": ["ui/*"],
+      "~store/*": ["store/*"],
       "~config/*": ["config/*"],
-      "~utils/*": ["utils/*"]
+      "~utils/*": ["utils/*"],
+      "~middleware/*": ["middleware/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -1,9 +1,0 @@
-{
-  "parserOptions": {
-    "ecmaVersion": 12,
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "cypress",
-    "sourceType": "module",
-    "exclude": ["cypress"]
-  }
-}
